@@ -1,0 +1,17 @@
+# wrangler.toml
+# Cloudflare Workers config with a build step that generates a deployment timestamp.
+# Create a script at ./scripts/generate-timestamp.js that writes the timestamp into your src (see README below).
+
+name = "shopping-cart"
+type = "javascript"
+workers_dev = true
+compatibility_date = "2025-11-06"
+
+[build]
+# This command should generate a file (e.g. src/deploy-timestamp.js or src/deploy-timestamp.json)
+# that your worker can import/read at runtime. Example script: ./scripts/generate-timestamp.js
+command = "node ./scripts/generate-timestamp.js && npm run build"
+
+# Optional: put runtime globals here if you want a static timestamp (not recommended for dynamic deploys)
+# [vars]
+# DEPLOY_TIMESTAMP = "2025-11-06T00:00:00Z"
