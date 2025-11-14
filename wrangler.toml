@@ -2,9 +2,7 @@
 # Cloudflare Workers config with a build step that generates a deployment timestamp.
 # Create a script at ./scripts/generate-timestamp.js that writes the timestamp into your src (see README below).
 
-name = "shopping-cart"
-type = "javascript"
-workers_dev = true
+name = "shopping-cart-jaycenusa"
 compatibility_date = "2025-11-06"
 
 [build]
